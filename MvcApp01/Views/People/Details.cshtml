@@ -1,0 +1,12 @@
+﻿@using MvcApp01.Models
+@{ 
+    Person p = ViewBag.p;
+} 
+<h1>Person Detials View</h1>
+ID: @p.Id <br/>
+Person Name: @p.PName <br/>
+Gender: @p.Gender <br/>
+Age: @p.Age <hr/>
+
+Goto:
+            <a asp-controller="people" asp-action="index"  >Back to index</a>

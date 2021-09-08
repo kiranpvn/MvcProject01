@@ -1,0 +1,19 @@
+﻿@using MvcApp01.Models
+@{
+    Student s = ViewBag.s;
+}
+<h2>Details View</h2>
+
+ID: @s.Id
+<br />
+Student Name: @s.SName
+<br />
+Course: @s.Course
+<br />
+Fee: @s.Fee
+<br />
+
+<hr />
+
+Goto:
+<a asp-controller="Students" asp-action="index">Back to index</a>

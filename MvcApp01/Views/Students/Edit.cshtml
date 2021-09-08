@@ -1,0 +1,23 @@
+﻿<h1>Edit Student View</h1>
+@{ 
+    Student s = ViewBag.s;
+}
+@using (Html.BeginForm())
+{
+    @Html.Label("id", "Enter Id: ");
+    @Html.TextBox("id", s.Id);
+    <br />
+    @Html.Label("sname", "Enter SName: ");
+    @Html.TextBox("sname", s.SName );
+    <br />
+    @Html.Label("course", "Enter Course: ");
+    @Html.TextBox("course", s.Course );
+    <br />
+    @Html.Label("fee", "Enter Fee: ");
+    @Html.TextBox("fee", s.Fee );
+    <br />
+    <button>Edit</button>
+    <button type="reset">Clear All</button>
+}
+<br />
+Goto: <a asp-controller="students" asp-action="index">Back to index</a>

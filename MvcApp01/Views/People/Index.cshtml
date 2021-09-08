@@ -1,0 +1,26 @@
+﻿@using MvcApp01.Models;
+@{ 
+    List<Person> people = ViewBag.people;
+}
+<h1>List of People</h1>
+
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>ID</th>
+        <th>Person Name</th>
+        <th>Gender</th>
+        <th>Age</th>
+        <th>Operations</th>
+    </tr>
+
+    @foreach ( Person p in people)
+            {
+<tr>
+    <td>@p.Id</td>
+    <td>@p.PName</td>
+    <td>@p.Gender</td>
+    <td>@p.Age</td>
+    <td>    <a asp-controller="people" asp-action="details" asp-route-id=@p.Id>Details</a></td>
+</tr>
+            }
+</table>

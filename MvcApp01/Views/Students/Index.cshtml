@@ -1,0 +1,21 @@
+﻿@using MvcApp01.Models
+@{ 
+    List<Student> students = ViewBag.students;
+}
+<h1>List of Students</h1>
+<a asp-controller="students" asp-action="create" >Create Student</a>
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>Id</th> <th>STudent Name</th> <th>Course</th> <th>Fee</th>
+        <th>Operations</th>
+    </tr>
+    @foreach ( Student s in students)
+            {
+                <tr>
+                    <td>@s.Id</td>  <td> @s.SName</td> <td>@s.Course</td> <td>@s.Fee</td>
+                    <td><a asp-controller="students" asp-action="details" asp-route-id=@s.Id> Details</a> | 
+                    <a asp-controller="students" asp-action="edit" asp-route-id=@s.Id> Edit</a> |
+                    <a asp-controller="students" asp-action="delete" asp-route-id=@s.Id> Delete</a> </td>
+                </tr>
+            }
+    </table>

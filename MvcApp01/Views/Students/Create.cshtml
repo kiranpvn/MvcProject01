@@ -1,0 +1,20 @@
+﻿<h1>Create Student</h1>
+@using (Html.BeginForm())
+{
+    @Html.Label("id", "Enter Id: ");
+    @Html.TextBox("id");
+    <br />
+    @Html.Label("sname", "Enter SName: ");
+    @Html.TextBox("sname");
+    <br />
+    @Html.Label("course", "Enter Course: ");
+    @Html.TextBox("course");
+    <br />
+    @Html.Label("fee", "Enter Fee: ");
+    @Html.TextBox("fee");
+    <br />
+    <button>Create</button>
+    <button type="reset">Clear All</button>
+}
+<br/>
+Goto: <a asp-controller="students" asp-action="index">Back to index</a>
